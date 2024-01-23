@@ -1,0 +1,229 @@
+
+.recomend-filters span{
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.recomend-filters .current,
+.recomend-filters span:hover{
+    background-color: #212121;
+    color: #fff;
+}
+.section_item--separate{
+    border-bottom: 2px solid #888888;
+    content: "";
+    display: flex;
+     align-items: center;
+     justify-content: center;
+    margin: 15px auto 0px;
+    width: 60px;
+    transition: all 0.5s ease 0s;
+}
+.section_item--separate {
+    font: 700 30px/28px 'Roboto', sans-serif;
+    white-space: nowrap;
+    line-height: 60px;
+  
+  }
+.section_item--separate:hover {
+    width: 120px; /* Độ dài thêm 30px so với kích thước ban đầu */
+  }
+.item {
+    position: relative;
+  }
+
+ .list_icon{
+    position: absolute;
+    top: 180px;
+    left: 50px;
+    display: flex;      
+    display: none; /* Ẩn biểu tượng mặc định */
+
+  }
+  .item:hover .list_icon {
+    display: flex; /* Hiển thị biểu tượng khi di chuột qua phần tử */
+  }
+
+  .list_icon .iconid{
+    margin-left: 10px;
+    background-color: #fcfcfc;
+    border: 1px solid #ff5e00;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #ff5e00;
+    font-size: 15px;
+    line-height: 40px;
+    border-radius: 50%;
+
+    transform-style: preserve-3d; /* Thêm hiệu ứng 3D */
+    transition: transform 1s ease; /* Thêm hiệu ứng chuyển động */
+}
+/* .iconid:hover {
+    transform: rotateY(360deg); /* Hiệu ứng xoay 3D khi di chuột qua */
+
+
+.list_icon :hover i{
+
+    color:#fcfcfc;
+    background-color: #ff5e00;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 40px;
+    border-radius: 50%;
+
+}
+
+.col{
+    cursor: pointer;
+}
+.products-list .item .discount{
+  background-color:yellow;
+  font-size: 12px;
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+.products-list .item .discounts{
+    background-color:#999999;
+    font-size: 12px;
+}
+.products-list .item .soldout{
+    z-index: 1;
+    transition: all 0.3s linear;
+}
+.thumb img{
+    transition: all 0.3s linear;
+}
+.item :hover .soldout,
+.item:hover .discount,
+.thumb:hover img{
+    transform: scale(1.1);
+}
+.item:hover img {
+    transform: scale(1.1);
+}
+.item:hover a{
+    color:#3991f0;
+}
+.content .title:hover{
+    color: #333;
+}
+
+.icon-Evaluate{
+    display:flex
+}
+.icon-star{
+    margin-left: 2.5px;
+    font-size: 13px;
+    color:#ffb700;
+}
+
+.alert-success {
+    display: inline-block;
+    margin: 0 auto;
+    position: fixed;
+    transition: all 0.5s ease-in-out 0s;
+    z-index: 2031;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .bg-info-transparent {
+    background-color: rgba(0, 123, 255, 0.5);
+  }
+  
+
+
+.border-animation::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Đặt bottom về 0 để thanh màu vàng nằm ở cuối phần padding */
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: yellow;
+  animation: borderAnimation 5s linear forwards;
+}
+.cttestimonialcmsblock  {
+	color: #808080;
+	margin: 0px auto;
+	text-align: center;
+	width: 100%;
+}
+.cttestimonialcmsblock .testimonial-area {
+	float: left;
+	width: 100%;
+	margin: 0px 0px;
+	position: relative;
+	padding: 0 16%;
+}
+
+.cttestimonialcmsblock  .des {
+	font-size: 13px;
+	letter-spacing: 0.5px;
+	line-height: 28px;
+	color: #888888;
+	font-weight: 400;
+	margin-bottom:25px;
+}
+.thumb-blogs {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 30px;
+}
+.introduction{
+  margin-bottom: 10px;
+  justify-content: center; 
+  display:flex
+
+}
+.introduction .name{
+  color: #000000;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 700;
+  padding-right: 8px;
+}
+.icon-blogs{
+  justify-content: center; 
+  display:flex
+}
+.icon-blogs .icon-circle{
+  margin-left: 5px;
+}
+.icon-circle-xam {
+  color:#e6e6e6;
+}
+.container.blogs2,
+.container.blogs3 {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .list_icon {
+    top: 120px; /* Điều chỉnh vị trí của biểu tượng trên thiết bị di động */
+  }
+}
+@media only screen and (max-width: 768px) {
+  .list_icon {
+    left: 50px; /* Dịch biểu tượng sang bên phải 100px trên thiết bị di động */
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .list_icon {
+    left: 0px; /* Dịch biểu tượng sang bên phải 100px trên máy tính bảng */
+  }
+}
+
+@keyframes borderAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

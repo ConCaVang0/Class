@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="product.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="css.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<style>
+	.fa-star {
+		color: gray;
+		
+	}
+
+	.fa-star.active {
+		color: yellow;
+		/* Màu sáng khi sao được nhấp vào */
+	}
+
+	.thank-you-message {
+		display: none;
+		/* Ẩn thông báo */
+		color: red;
+		font-weight: bold;
+	}
+
+
+	.icon {
+		position: relative;
+		opacity: 0;
+		animation: fall 0.4s ease-in-out forwards;
+	}
+
+	@keyframes fall {
+		0% {
+			transform: translateY(-100%);
+			opacity: 0;
+		}
+
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	.icon:nth-child(1) {
+		animation-delay: 0.1s;
+	}
+
+	.icon:nth-child(2) {
+		animation-delay: 0.2s;
+	}
+
+	.icon:nth-child(3) {
+		animation-delay: 0.3s;
+	}
+</style>
+
+<body>
+	<div class="container-fluid text-center bg-info text-white p-3">
+		<div class="animate__animated animate__backInLeft">
+			WELCOME! – MADE WITH LOVE by </span>
+			<span class=" text-decoration-underline"> </span>
+		</div>
+	</div>
+	<div id="content" class="container mt-4">
+		<div class="row">
+			<div class="col-lg-5 col-md-12 col-sm-12">
+				<div class="product_info-img">
+					<img class="img-fluid custom-image "
+						src="https://www.hansenwholesale.com/media/wysiwyg/ceiling-fans/category/product_3.png" alt="">
+				</div>
+			</div>
+			<div class="col-lg-7 col-md-12 col-sm-12">
+				<h3 class="product-title">Exercitat Virginia</h3>
+
+				<div class="rating-wrapper">
+					<div class="icon-Evaluate">
+						<div class="icon-star">
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<div class="icon-star">
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<div class="icon-star">
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<div class="icon-star">
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<div class="icon-star">
+							<i class="fa-regular fa-star"></i>
+						</div>
+					</div>
+
+					<a href="" id="write-review-link" class="review-count text-body-secondary"
+						onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;" class="write-review"><i
+							class="fa fa-pencil"></i>Write a review</a>
+
+				</div>
+
+
+				<ul class="list-unstyled attr">
+					<li><span class="desc">Brand:: </span><a
+							href="https://capricathemes.com/opencart/OPC02/OPC020033/index.php?route=product/manufacturer/info&amp;manufacturer_id=9">Canon</a>
+					</li>
+					<li><span class="desc">Product Code: </span class=''> Product 3</li>
+					<li><span class="desc">Reward Points: </span> 200</li>
+					<li><span class="desc">Availability: </span> In Stock</li>
+				</ul>
+
+				<ul class="list-unstyled price p-2">
+					<div class="account_p">
+						<li>
+							<span class="old-price" style="text-decoration: line-through;">$170.00</span>
+						</li>
+						<li class="p-2">
+							<strong class="text-danger">$141,1</strong>
+						</li>
+						<li class="price-tax">Ex Tax: $85.00</li>
+					</div>
+				</ul>
+
+				<div id="product">
+					<h3 class="product-option">Available Options</h3>
+					<div class="form-group required">
+						<label class="control-label" for="input-option226">Select</label>
+						<select name="option[226]" id="input-option226" class="form-control">
+							<option value=""> --- Please Select --- </option>
+							<option value="15">Red
+							</option>
+							<option value="16">Blue
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="quanlity mt-3 d-flex">
+					<label class="control-label " for="input-quantity">Qty</label>
+					<input type="text" name="quantity" value="1" size="2" id="input-quantity"
+						class="form-control custom-width text-center" />
+
+					<button type="button" id="button-cart" class="btn btn-dark button-cart">Add to Cart</button>
+
+					<button type="button" id="button-cart" class="btn btn-dark button-heart">
+						<i class="fa-regular fa-heart"></i>
+					</button>
+				</div>
+			</div>
+			<div class="review_product mt-5">
+				<ul class="nav justify-content-center">
+					<li class="active me-5"><a href="#tab-description" id="tab-description-link" data-toggle="tab"
+							onclick="showDescription()">Description</a></li>
+					<li><a href="#tab-review" id="tab-review-link" data-toggle="tab" onclick="showReview()">Reviews</a>
+					</li>
+				</ul>
+
+				<div class="tab-content ">
+					<div class="tab-pane active" id="tab-description">
+						<p><b>The standard Lorem Ipsum passage, used since the 1500</b></p>
+						<p>Fashion has been creating well-designed collections since 2010. The brand offers feminine
+							designs delivering stylish separates and statement dresses which has since evolved into
+							a full ready-to-wear collection in which every item is a vital part of a woman's
+							wardrobe. The result? Cool, easy, chic looks with youthful elegance.Many desktop
+							publishing packages and web page editors now use Lorem Ipsum as their default model
+							text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+						</p>
+
+						<p>c It has roots in a piece of classical Latin literature from 45 BC, making it over 2000
+							years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+							looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
+							and going through the cites of the word in classical literature,</p>
+
+						<p><b>Contrary to popular belief, Lorem Ipsum is not simply random text. </b></p>
+						<p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+							default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+							their infancy. Various versions have evolved over the years, sometimes by accident,
+							sometimes on purpose (injected humour and the like).All the Lorem Ipsum generators on
+							the Internet tend to repeat predefined chunks as necessary, making this the first true
+							generator on the Internet.</p>
+					</div>
+				</div>
+				<div class="tab-review">
+					<div class="tab-pane" id="tab-review">
+						<form class="form-horizontal" id="form-review">
+							<div id="review"></div>
+							<h3>Write a review</h3>
+							<div class="form-group required">
+								<div class="col-sm-12">
+									<label class="control-label" for="input-name">Your Name</label>
+									<input type="text" name="name" value="" id="input-name" class="form-control" />
+								</div>
+							</div>
+							<div class="form-group required">
+								<div class="col-sm-12">
+									<label class="control-label" for="input-review">Your Review</label>
+									<textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
+									<div class="help-block"><span class="text-danger">Note:</span> HTML is not
+										translated!
+									</div>
+								</div>
+							</div>
+							<div class="form-group required">
+								<div class="col-sm-12">
+									<label class="control-label">Rating</label>
+									<div id="iconRating" class="list_icon  d-flex ">
+										<div class="sao">
+											<i class="fa-regular fa-star"></i>
+										</div>
+										<div class="sao">
+											<i class="fa-regular fa-star"></i>
+										</div>
+										<div class="sao">
+											<i class="fa-regular fa-star"></i>
+										</div>
+										<div class="sao">
+											<i class="fa-regular fa-star"></i>
+										</div>
+										<div class="sao">
+											<i class="fa-regular fa-star"></i>
+										</div>
+									</div>
+									<div class="thank-you-message  animate__animated animate__fadeInDown">Thank you for
+										rating! </div>
+								</div>
+								<div class="buttons clearfix">
+									<div class="pull-right">	
+										<button type="button" id="button-review" data-loading-text="Loading..."
+											class="btn btn-dark">Continue</button>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script>
+		function showDescription() {
+			document.getElementById('tab-description').classList.add('active');
+			document.getElementById('tab-review').classList.remove('active');
+		}
+
+		function showReview() {
+			document.getElementById('tab-description').classList.remove('active');
+			document.getElementById('tab-review').classList.add('active');
+		}
+		function showDescription() {
+			document.getElementById('tab-description').classList.add('active');
+			document.getElementById('tab-review').classList.remove('active');
+
+			// Thay đổi font-weight
+			document.getElementById('tab-description-link').style.fontWeight = 600;
+			document.getElementById('tab-review-link').style.fontWeight = 500;
+		}
+
+		function showReview() {
+			document.getElementById('tab-description').classList.remove('active');
+			document.getElementById('tab-review').classList.add('active');
+
+			// Thay đổi font-weight
+			document.getElementById('tab-description-link').style.fontWeight = 500;
+			document.getElementById('tab-review-link').style.fontWeight = 600;
+		}
+		const stars = document.querySelectorAll('.fa-regular.fa-star');
+		const thankYouMessage = document.querySelector('.thank-you-message');
+
+		// Lặp qua từng sao
+
+		stars.forEach((star, index) => {
+			star.addEventListener('click', () => {
+				stars.forEach((s, idx) => {
+					if (idx <= index) {
+						s.classList.add('active'); /* Thêm lớp 'active' để thay đổi màu */
+					} else {
+						s.classList.remove('active'); /* Xóa lớp 'active' để đổi về màu mặc định */
+					}
+				});
+
+				thankYouMessage.style.display = 'block'; /* Hiển thị thông báo */
+
+				setTimeout(() => {
+					thankYouMessage.style.display = 'none'; /* Ẩn thông báo sau 5 giây */
+				}, 5000);
+			});
+		});
+
+	</script>
+
+</body>
+
+</html>

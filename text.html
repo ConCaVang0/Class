@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+</head>
+<style>
+.cttestimonialcmsblock {
+    color: #808080;
+    margin: 0px auto;
+    text-align: center;
+    width: 100%;
+}
+.testimonial-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cttestimonialcmsblock .testimonial-area {
+    float: left;
+    width: 100%;
+    margin: 0px 0px;
+    padding: 0 16%;
+}
+
+.cttestimonialcmsblock .des {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    color: #888888;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.thumb-blogs {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.introduction {
+    margin-bottom: 10px;
+    justify-content: center; 
+    display: flex;
+}
+.icon-blogs{
+    justify-content: center; 
+    display:flex
+}
+.icon-blogs .icon-circle{
+    margin-left: 5px;
+}
+.icon-circle-xam {
+    color:#e6e6e6;
+}
+.container.blogs2,
+.container.blogs3 {
+    display: none;
+} .container:hover {
+        cursor: move;
+    }
+</style>
+<body>
+    <div class="container blogs1 animate__animated animate__backInLeft">
+        <div class="thumb-blogs">
+            <img class="" src="https://capricathemes.com/opencart/OPC02/OPC020033/catalog/view/theme/Artcraft/image/capricathemes/quote.png" alt="">
+        </div>
+        <div class="cttestimonialcmsblock testimonial-wrapper" >
+            <div class="testimonial-area">
+                <div class="title">
+                    <div class="introduction">
+                        <div class="name"><a href="#">Shetty Jamie</a></div>
+                        <span class="subheading">(Slither Art)</span>
+                    </div>
+                </div>
+                <div class="des">
+                    Thank you to all customers for accompanying us, and always supporting our products. We always try to create products that satisfy customers. Hope customers always support us
+                </div   >
+            </div>
+        </div>
+    </div>
+   
+   
+    <div class="container blogs2 animate__animated animate__backInLeft">
+        <div class="thumb-blogs">
+            <img class="" src="https://capricathemes.com/opencart/OPC02/OPC020033/catalog/view/theme/Artcraft/image/capricathemes/quote.png" alt="">
+        </div>
+        <div class="cttestimonialcmsblock testimonial-wrapper">
+            <div class="testimonial-area">
+                <div class="title">
+                    <div class="introduction">
+                        <div class="name"><a href="#"> Jamie</a></div>
+                        <span class="subheading">(Slither Art)</span>
+                    </div>
+                </div>
+                <div class="des">
+                    There are many variations of passages of Lorem Ipsum available,
+                    but the majority have suffered alteratioform, by injected humour, or randomised words which don't look even slightly There are many variations of passages of Lorem Ipsum available,
+                    but the majority have suffered alteratioform. but the majority have suffered alteratioform.
+                </div   >
+            </div>
+        </div>
+    </div>
+    <div class="container blogs3 animate__animated animate__backInLeft  " >
+        <div class="thumb-blogs">
+            <img class="" src="https://capricathemes.com/opencart/OPC02/OPC020033/catalog/view/theme/Artcraft/image/capricathemes/quote.png" alt="">
+        </div>
+        <div class="cttestimonialcmsblock testimonial-wrapper">
+            <div class="testimonial-area">
+                <div class="title">
+                    <div class="introduction">
+                        <div class="name"><a href="#">Shetty </a></div>
+                        <span class="subheading">(Slither Art)</span>
+                    </div>
+                </div>
+                <div class="des">
+                    There are many variations of passages of Lorem Ipsum available,
+                    but the majority have suffered alteratioform, by injected humour, or randomised words which don't look even slightly There are many variations of passages of Lorem Ipsum available,
+                    but the majority have suffered alteratioform. but the majority have suffered alteratioform.
+                </div   >
+            </div>
+        </div>
+    </div>
+    <div class=" container icon-blogs py-3">
+        <div class="icon-circle">
+            <i class="fa-solid fa-circle"></i>
+        </div>
+        <div class="icon-circle icon-circle-xam">
+            <i class="fa-solid fa-circle"></i>
+        </div>
+        <div class="icon-circle icon-circle-xam">
+            <i class="fa-solid fa-circle"></i>
+        </div>
+    </div>
+
+<script>
+// Lấy danh sách tất cả các biểu tượng
+var icons = document.getElementsByClassName('icon-circle');
+
+// Lặp qua từng biểu tượng để thêm sự kiện click
+for (var i = 0; i < icons.length; i++) {
+    icons[i].addEventListener('click', function() {
+        // Xóa lớp 'icon-circle-xam' từ tất cả các biểu tượng
+        for (var j = 0; j < icons.length; j++) {
+            icons[j].classList.add('icon-circle-xam');
+        }
+        
+        // Xóa lớp 'icon-circle-xam' cho biểu tượng hiện tại
+        this.classList.remove('icon-circle-xam');
+    });
+}
+
+
+const blogs1 = document.querySelector('.blogs1');
+        const blogs2 = document.querySelector('.blogs2');
+        const blogs3 = document.querySelector('.blogs3');
+        const icon1 = document.querySelector('.icon-circle:nth-child(1)');
+        const icon2 = document.querySelector('.icon-circle:nth-child(2)');
+        const icon3 = document.querySelector('.icon-circle:nth-child(3)');
+
+        icon1.addEventListener('click', () => {
+            blogs1.style.display = 'block';
+            blogs2.style.display = 'none';
+            blogs3.style.display = 'none';
+        });
+
+        icon2.addEventListener('click', () => {
+            blogs1.style.display = 'none';
+            blogs2.style.display = 'block';
+            blogs3.style.display = 'none';
+        });
+
+        icon3.addEventListener('click', () => {
+            blogs1.style.display = 'none';
+            blogs2.style.display = 'none';
+            blogs3.style.display = 'block';
+        });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Serif', serif;
+    font-size: 1rem;
+    font-weight: 400;
+  line-height: 25px;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .list_icon {
+      top: 120px; /* Điều chỉnh vị trí của biểu tượng trên thiết bị di động */
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .list_icon {
+      left: 50px; /* Dịch biểu tượng sang bên phải 100px trên thiết bị di động */
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .list_icon {
+      left: 0px; /* Dịch biểu tượng sang bên phải 100px trên máy tính bảng */
+    }
+  }
+
+  @keyframes borderAnimation {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }

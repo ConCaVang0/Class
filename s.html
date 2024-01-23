@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+<body>
+  <style>
+     .fa-star {
+      color: gray; /* Màu mặc định của các sao */
+    }
+
+    .fa-star.active {
+      color: yellow; /* Màu sáng khi sao được nhấp vào */
+    }
+    .thank-you-message {
+      display: none; /* Ẩn thông báo */
+      color: red;
+      font-weight: bold;
+    }
+    .list_icon {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  position: relative;
+  opacity: 0;
+  animation: fall 0.4s ease-in-out forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.icon:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.icon:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.icon:nth-child(3) {
+  animation-delay: 0.3s;
+}
+  </style>
+  <div class="row g2 row-cols-2 row-cols-md-3 row-cols-lg-4 products-list">
+    <div class="col filterDiv Top"> 
+        <div class="p-4">
+            <div class="item position-relative">
+            <div class="thumb mb-4">
+                <span class="text-danger discount position-absolute start-0 top-10    py-1 px-2">
+                    -17%
+                </span>
+                <img class="img-fluid  position-relative " src="https://www.hansenwholesale.com/media/wysiwyg/ceiling-fans/category/product_3.png" alt="">
+               <div id="iconContainer" class="list_icon ">
+                <div id="iconRating=" class="list_icon  d-flex ">
+                  <div class="sao">
+                    <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="sao">	
+                    <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="sao">
+                    <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="sao">
+                    <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="sao">
+                    <i class="fa-regular fa-star"></i>
+                    </div>
+                   </div>
+               </div>
+
+            </div>
+            <a href="" class="fs-6">Hugger Flush Mount</a>
+            <div class="price hstack gap-2">
+                <del>$170,00</del>
+                <strong class="text-danger">$141,1</strong>
+            </div>
+            <div class="danhgia">
+              <div class="sao">
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="sao">
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="sao">
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="sao">
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="sao">
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            </div>  
+        </div>
+        <div class="thank-you-message  animate__animated animate__fadeInDown">Thank you for rating! </div>
+    </div>
+    <script>
+      const stars = document.querySelectorAll('.fa-regular.fa-star');
+    const thankYouMessage = document.querySelector('.thank-you-message');
+
+    // Lặp qua từng sao
+    stars.forEach((star, index) => {
+      star.addEventListener('click', () => {
+        stars.forEach((s, idx) => {
+          if (idx <= index) {
+            s.classList.add('active'); /* Thêm lớp 'active' để thay đổi màu */
+          } else {
+            s.classList.remove('active'); /* Xóa lớp 'active' để đổi về màu mặc định */
+          }
+        });
+
+        thankYouMessage.style.display = 'block'; /* Hiển thị thông báo */
+
+        setTimeout(() => {
+          thankYouMessage.style.display = 'none'; /* Ẩn thông báo sau 5 giây */
+        }, 3000);
+      });
+    });
+ 
+   
+
+
+  </script>
+</body>
+</html>
